@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  --primary-color: white;
+  --secondary-color: #133588;
+  --tertiary-color: #806c6c;
+}
+
+.hero-container {
+  background-image: url("https://assets.codepen.io/6060109/agency-hero-image.png");
+  background-size: cover;
+  height: 400px;
+  background-repeat: no-repeat;
+  color: var(--primary-color);
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+nav > p {
+  padding: 0 10px;
+}
+.hero-container > h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  text-align: center;
+}
+.services-container {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+}
+.services {
+  display: flex;
+  width: 70%;
+}
+.service-box {
+  padding: 0 20px;
+}
+.service-box > img {
+  width: 100%;
+}
+.service-box > p {
+  font-weight: bold;
+  color: var(--tertiary-color);
+}

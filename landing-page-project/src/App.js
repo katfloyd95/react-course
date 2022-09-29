@@ -1,9 +1,14 @@
 import './App.css';
+import FooterSection from './FooterSection';
+import HeroSection from './HeroSection';
+import ServicesSection from './ServicesSection';
 
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <HeroSection />
+      <ServicesSection />
+      <FooterSection />
     </div>
   );
 }
