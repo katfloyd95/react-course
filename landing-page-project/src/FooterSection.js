@@ -1,4 +1,5 @@
 export default function FooterSection() {
+  
   return (
     <div className="footer-section">
         <h1>SUBSCRIBE TO OUR EMAIL LIST</h1>
