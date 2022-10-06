@@ -1,3 +1,49 @@
 * {
   font-family: Arial, sans-serif;
 }
+h1  {
+  font-size: 50px;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(232, 101, 101);
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  color: rgb(230, 230, 230);
+  border-radius: 20px;
+}
+.tomato-container {
+  width: 40%;
+  margin-bottom: 80px;
+}
+.tomato-container >  h1 {
+  margin-bottom: 100px;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-container > button {
+  font-size: 50px;
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+}
+.rendered-tomatoes {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
