@@ -15,19 +15,27 @@ function App() {
     )
   }
 
+  let tomatoes = []
+
+  for (let i=0; i < number; i++) {
+    tomatoes.push("🍅");
+  }
+  
+  const tomatoString = tomatoes.join("");
 
   return (
     <div className="App">
       <div className="container">
         <h1>Tomato Counter</h1>
+        <div className ="rendered-tomatoes">
+          <h4>{!number ? "No tomatoes yet" : tomatoString}</h4>
+        </div>
         <div className="tomato-container">
-          <h1>{number}</h1>
           <div className="btn-container">
+          <button onClick={subNumber} >-</button>
             <button onClick={addNumber} >+</button>
-            <button onClick={subNumber} >-</button>
           </div>
         </div>
-        <div className ="rendered-tomatoes"></div>
       </div>
     </div>
   );
