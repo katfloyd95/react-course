@@ -22,17 +22,11 @@ h1  {
   color: rgb(230, 230, 230);
   border-radius: 20px;
 }
-.tomato-container {
-  width: 40%;
-  margin-bottom: 80px;
-}
-.tomato-container >  h1 {
-  margin-bottom: 100px;
-}
 .btn-container {
-  width: 100%;
+  width: 40%;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 80px;
 }
 .btn-container > button {
   font-size: 50px;
