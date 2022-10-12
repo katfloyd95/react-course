@@ -13,7 +13,7 @@ export default function TomatoContainer(props) {
 
   return (
     <div className ="rendered-tomatoes">
-      <h4>{!props.number ? "No tomatoes yet" : tomatoString}</h4>
+      <h6>{!props.number ? " " : tomatoString}</h6>
     </div>
   )
 }
