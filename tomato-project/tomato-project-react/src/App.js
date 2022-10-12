@@ -1,26 +1,62 @@
 import React from 'react';
-import TomatoContainer from './components/TomatoContainer';
-import BtnContainer from './components/BtnContainer';
+import './index.css'
+
+const days = ['M', 'Tu', 'W', 'Th', 'F', 'Sa', 'Su' ]
 
 function App() {
 
-  const [number, setNumber] = React.useState(0);
+  const [selectedDay, setSelectedDay] = React.useState("M");
 
-  const days = ['M', 'Tu', 'W', 'Th', 'F', 'Sa', 'Su' ]
+  const [allTomatoes, setAllTomatoes] = React.useState({});
+
+  function removeTomato() {
+    return (
+      setAllTomatoes(
+        {
+          ...allTomatoes,
+          [selectedDay]: `${allTomatoes[selectedDay].slice(0,-2)}`
+        }
+      )
+    )
+  }
+
+  function addTomato() {
+    return (
+      setAllTomatoes(
+        {
+          ...allTomatoes,
+          [selectedDay]: `${allTomatoes[selectedDay] ? allTomatoes[selectedDay] : ''}🍅`
+        }
+      )
+    )
+  }
 
   return (
     <div className="App">
       <div className="container">
         <h1>Tomato Counter</h1>
-        {days.map(dayNum => (
-            <div key={dayNum} className='tomato-box'>
-              <h3>{dayNum}</h3>
+        {days.map(day => (
+            <div 
+              onClick={() => {setSelectedDay(day)}}
+              style={selectedDay === day ? {color: 'black'} : {}}
+              key={day} 
+              className='tomato-box'>
+              <h3>{day}</h3>
               <div className='tomato-day-box'>
-              <TomatoContainer number={number} />
+                <h3>{allTomatoes[day]}</h3>
               </div>
             </div>
         ))}
-        <BtnContainer number={number} setNumber={setNumber} />
+        <div className='btn-container'>
+          <button 
+            className="button"
+            onClick={removeTomato}
+          >-</button>
+          <button 
+            className="button" 
+            onClick={addTomato}
+          >+</button>
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,6 @@
 
 export default function TomatoContainer(props) {
 
-  console.log(props.number);
-
   let tomatoes = []
 
   for (let i=0; i < props.number; i++) {

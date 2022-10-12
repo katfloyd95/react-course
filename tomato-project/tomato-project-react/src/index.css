@@ -58,4 +58,6 @@ h1  {
   align-items: center;
   border-radius: 10px;
 }
-
+.tomato-day-box > h3 {
+  margin-left: 10px;
+}
