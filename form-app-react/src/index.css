@@ -48,7 +48,6 @@ input:focus {
   padding: 5px 15px;
 }
 .right-image-container {
-  background-color: blue;
   width: 100%;
 }
 .right-image-container > img {
