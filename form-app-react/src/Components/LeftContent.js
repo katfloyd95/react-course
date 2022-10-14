@@ -8,12 +8,14 @@ export default function LeftContent({stage, setStage}) {
       <div className='content-container'>
         <SlideText stage={stage}/>
         <InputContent stage={stage} />
-        <button 
+        {stage !== 3 &&
+          <button 
           className='next-btn'
           onClick={() => {
             setStage(stage + 1);
           }}  
-        >Next</button>
+          >Next</button>
+        }
       </div>
     </div>
   )

@@ -4,7 +4,8 @@ export default function SlideText({stage}) {
   const SlideTexts = [
     "Apply to work with our agency",
     "What's your budget?",
-    "Anything else we should know?"
+    "Anything else we should know?",
+    "Thank You!"
   ]
 
   let textContent;

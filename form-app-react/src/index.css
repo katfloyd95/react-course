@@ -47,6 +47,16 @@ input:focus {
   color: #735E5D;
   padding: 5px 15px;
 }
+.button-box > button {
+  margin-right: 15px;
+  background-color: #735E5D;
+  border: 2px solid white;
+  color: white;
+  padding: 5px 10px;
+}
+.button-box > button:last-child {
+  margin-right: none;
+}
 .right-image-container {
   width: 100%;
 }
