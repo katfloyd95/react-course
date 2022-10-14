@@ -47,15 +47,25 @@ input:focus {
   color: #735E5D;
   padding: 5px 15px;
 }
+.next-btn:hover {
+  cursor: pointer;
+}
+.button-box {
+  display: flex;
+  justify-content: space-between;
+}
 .button-box > button {
-  margin-right: 15px;
   background-color: #735E5D;
   border: 2px solid white;
   color: white;
   padding: 5px 10px;
 }
-.button-box > button:last-child {
-  margin-right: none;
+.button-box > button:hover {
+  cursor: pointer;
+}
+.button-box > .selected-btn {
+  background-color: white;
+  color: #735E5D;
 }
 .right-image-container {
   width: 100%;

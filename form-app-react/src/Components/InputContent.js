@@ -1,21 +1,33 @@
-export default function InputContent({stage}) {
+import ButtonGroup from "./ButtonGroup";
+
+export default function InputContent({stage, updateValueEmail, updateValueDetails, budget, updateBudget}) {
   
   let inputContent;
-  if (stage === 0 || stage === 2) {
+  if (stage === 0) {
     inputContent = (
       <>
-        <input type='text'  placeholder={stage === 0 ? "What's your email?" : ""} />
+        <input 
+          type='text' 
+          onChange={e => updateValueEmail(e.target.value)} 
+          placeholder={stage === 0 ? "What's your email?" : ""} />
       </>
     )
-  }
-  if (stage === 1) {
+  } else if (stage === 1) {
     inputContent = (
       <>
-        <div className='button-box'>
-          <button>$2K</button>
-          <button>$5K</button>
-          <button>No Limit</button>
-        </div>
+        <ButtonGroup
+          budget={budget}
+          updateBudget={updateBudget}
+        />
+      </>
+    )
+  } else if (stage === 2) {
+    inputContent = (
+      <>
+        <input 
+          type='text' 
+          onChange={e => updateValueDetails(e.target.value)} 
+          placeholder={stage === 0 ? "What's your email?" : ""} />
       </>
     )
   }

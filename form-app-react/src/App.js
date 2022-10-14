@@ -7,8 +7,6 @@ function App() {
 
   const [stage, setStage] = React.useState(0);
 
-  console.log(stage);
-
   return (
     <div className='form-container'>
       <LeftContent stage={stage} setStage={setStage} />
